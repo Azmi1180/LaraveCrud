@@ -23,8 +23,8 @@
         @endif
         
         <div class="row">
-            <form action="/siswa/{{$siswa->$id}}/update" method="POST">
-                <h1>Edit Data Siswa</h1>
+            <form action="/siswa/{{$siswa->id}}/update" method="POST">
+                <h1>Edit Data Siswa</h1>    
                 {{ csrf_field() }}
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Nama Depan</label>
