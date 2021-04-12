@@ -1,21 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Table data siswa</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <style>
+@extends('layouts.master')
 
-    </style>
-</head>
-<body>
-        
-    {{-- Section Table --}}
+@section('content')
     
-    <div class="container mt-5">
-
         @if(session('success'))
             <div class="alert alert-success  mt-2" role="alert">
             {{ session('success') }}
@@ -54,6 +40,7 @@
                     <td>{{ $siswa->agama }}</td>
                     <td>{{ $siswa->alamat }}</td>
                     <td><a class="btn btn-warning" href="/siswa/{{ $siswa->id }}/edit">Edit</a></td>
+                    <td><a class="btn btn-danger" href="/siswa/{{ $siswa->id }}/delete">Delete</a></td>
                 </tr>    
                 @endforeach    
             </table>        
@@ -112,13 +99,8 @@
         </form>
         </div>
         </div>
-    </div>
     {{-- End Of Modal --}}
 
 
 
-    {{-- Script Javascript --}}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-
-</body>
-</html>
+@endsection
