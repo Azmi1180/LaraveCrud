@@ -39,8 +39,11 @@
                     <td>{{ $siswa->jenis_kelamin }}</td>
                     <td>{{ $siswa->agama }}</td>
                     <td>{{ $siswa->alamat }}</td>
-                    <td><a class="btn btn-warning" href="/siswa/{{ $siswa->id }}/edit">Edit</a></td>
-                    <td><a class="btn btn-danger" href="/siswa/{{ $siswa->id }}/delete">Delete</a></td>
+                    <td>
+                        <a class="btn btn-warning btn-sm" href="/siswa/{{ $siswa->id }}/edit">Edit</a>
+                        <a class="btn btn-danger btn-sm" href="/siswa/{{ $siswa->id }}/delete">Delete</a>
+                    </td>
+                    
                 </tr>    
                 @endforeach    
             </table>        
